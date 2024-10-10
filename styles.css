@@ -1395,6 +1395,7 @@ p {
 .menu-icon {
     display: none;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .menu-icon span {
@@ -1414,6 +1415,11 @@ p {
         top: 20px;
     }
 
+    nav {
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -1431,10 +1437,5 @@ p {
 
     .nav-links li {
         margin: 10px 0;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }

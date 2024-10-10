@@ -333,6 +333,22 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
+                const menuIcon = document.querySelector('.menu-icon');
+                const navLinks = document.querySelector('.nav-links');
+
+                menuIcon.addEventListener('click', function() {
+                    navLinks.classList.toggle('show');
+                });
+
+                // Close menu when a link is clicked
+                const navItems = document.querySelectorAll('.nav-links a');
+                navItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        navLinks.classList.remove('show');
+                    });
+                });
+
+                // Existing testnet popup code...
                 var testnetLink = document.getElementById("testnetLink");
                 var testnetPopup = document.getElementById("testnetPopup");
                 var closePopup = testnetPopup.getElementsByClassName("close")[0];
