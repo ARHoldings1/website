@@ -1,0 +1,364 @@
+:root {
+    --primary-color: #FFD700; /* Gold */
+    --background-color: #000000; /* Black */
+    --text-color: #FFFFFF; /* White */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding-top: 80px; /* To account for the fixed header */
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+.burger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
+
+.crypto-logo {
+    max-width: 200px;
+    height: auto;
+    margin-top: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    margin-left: 1rem;
+}
+
+.nav-item > a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 5px;
+    right: 0; /* Align to the right side of the nav item */
+}
+
+/* Adjust positioning for the last two nav items */
+.nav-item:nth-last-child(-n+2) .dropdown-content {
+    right: 0;
+    left: auto;
+}
+
+.dropdown-content a, .dropdown-content p {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+    }
+
+    .nav-item:hover .dropdown-content {
+        display: none;
+    }
+
+    .nav-item.active .dropdown-content {
+        display: block;
+    }
+}
+
+/* Add these new styles to your existing CSS file */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    max-width: 50%; /* Adjust as needed */
+}
+
+.logo {
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.logo-text p {
+    font-size: 0.8rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .logo-container {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Home section styles */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px); /* Adjust based on your header height */
+    padding: 2rem;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.welcome-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.welcome-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif; /* You can change this to a more beautiful font */
+    color: var(--primary-color);
+}
+
+.welcome-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button.presale {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.cta-button.fairsale {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+.crypto-logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.crypto-logo {
+    max-width: 240px; /* Increased by 20% from the previous 200px */
+    height: auto;
+}
+
+/* Responsive design for home section */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .welcome-text {
+        padding-right: 0;
+        margin-top: 2rem;
+    }
+
+    .crypto-logo-container {
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+}

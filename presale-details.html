@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Protocol - Presale Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/dot-protocol-logo.png" alt="Dot Protocol Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#technology">Our Technology</a></li>
+                <li><a href="index.html#ecosystem">Ecosystem</a></li>
+                <li><a href="index.html#use-cases">Use Cases</a></li>
+                <li><a href="tokenomics.html">Tokenomics</a></li>
+                <li><a href="whitepaper.html">Whitepaper</a></li>
+                <li><a href="index.html#roadmap">Roadmap</a></li>
+                <li><a href="#" id="testnetLink">Testnet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="presale-container">
+        <aside class="presale-dashboard">
+            <ul>
+                <li><a href="#dashboard" id="dashboardLink">Dashboard</a></li>
+                <li><a href="#presale" id="presaleLink">Pre Sale</a></li>
+                <li><a href="#fairsale" id="fairsaleLink">Fair Sale</a></li>
+                <li><a href="#presale-transactions" id="presaleTransactionsLink">Pre sale transactions</a></li>
+                <li><a href="#fairsale-transactions" id="fairsaleTransactionsLink">Fair sale transactions</a></li>
+                <li><a href="#vault" id="vaultLink">Vault</a></li>
+            </ul>
+        </aside>
+
+        <section id="dashboard-content">
+            <h2>Dot Protocol Presale</h2>
+            <div class="presale-content">
+                <div class="presale-info">
+                    <div class="presale-stats">
+                        <div class="stat-item">
+                            <h3>Total Raised</h3>
+                            <p id="totalRaised">1250 USD</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Tokens Sold</h3>
+                            <p id="tokensSold">1,250 DPC20</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Remaining</h3>
+                            <p id="remaining">99,998,750 DPC20</p>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 0.00125%"></div>
+                    </div>
+                    <p class="progress-text">1,250 out of 100,000,000 tokens sold (0.00125%)</p>
+                </div>
+                <div class="wallet-connect">
+                    <button id="connectWallet">Connect Wallet</button>
+                    <button id="payWith3DOT">Pay with 3DOT Wallet</button>
+                </div>
+                <div id="walletStatus"></div>
+            </div>
+
+            <div class="presale-phases">
+                <h3>Pre-sale Phases</h3>
+                <div class="phase-grid">
+                    <div class="phase-item">
+                        <h4>Alpha Round (Oct 15 to Nov 15 2024)</h4>
+                        <ul>
+                            <li><strong>Token Allocation:</strong> 1,000,000 3DOT</li>
+                            <li><strong>Lock-In Period:</strong> 60 Months</li>
+                            <li><strong>Vesting Schedule:</strong> After lock-in, monthly vesting for 36 months.</li>
+                            <li><strong>Price:</strong> 1 3DOT = $0.50</li>
+                        </ul>
+                    </div>
+                    <div class="phase-item">
+                        <h4>Beta Round (Nov 20 to Dec 20 2024)</h4>
+                        <ul>
+                            <li><strong>Token Allocation:</strong> 1,000,000 3DOT</li>
+                            <li><strong>Lock-In Period:</strong> 54 Months</li>
+                            <li><strong>Vesting Schedule:</strong> After lock-in, monthly vesting for 36 months.</li>
+                            <li><strong>Price:</strong> 1 3DOT = $1.00</li>
+                        </ul>
+                    </div>
+                    <div class="phase-item">
+                        <h4>Gamma Round (Jan 5 to Feb 5 2025)</h4>
+                        <ul>
+                            <li><strong>Token Allocation:</strong> 1,000,000 3DOT</li>
+                            <li><strong>Lock-In Period:</strong> 48 Months</li>
+                            <li><strong>Vesting Schedule:</strong> After lock-in, monthly vesting for 36 months.</li>
+                            <li><strong>Price:</strong> 1 3DOT = $4.00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="presale-content" style="display: none;">
+            <h2>Alpha Round is now live: (Oct 15 to Nov 15 2024)</h2>
+            <div class="presale-content-wrapper">
+                <div class="presale-stats-boxes">
+                    <div class="stat-box">
+                        <h3>Your Total 3DOT Balance</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>3DOT Pre-sale Price</h3>
+                        <p>$0.50</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Number of vested Coins</h3>
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="presale-details phase-item">
+                    <h4>Round Details</h4>
+                    <ul>
+                        <li><strong>Token Allocation:</strong> 1,000,000 3DOT</li>
+                        <li><strong>Lock-In Period:</strong> 60 Months</li>
+                        <li><strong>Vesting Schedule:</strong> After lock-in, monthly vesting for 36 months.</li>
+                        <li><strong>Price:</strong> 1 3DOT = $0.50</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="presale-actions-wrapper">
+                <div class="swap-container">
+                    <h3>Buy 3DOT</h3>
+                    <p>Current 3DOT price: $1.00</p>
+                    <p>Current Presale Price: $0.50</p>
+                    <div class="swap-form">
+                        <div class="swap-input">
+                            <input type="number" id="swapAmount" placeholder="Enter amount" min="0" step="0.01">
+                            <select id="swapToken">
+                                <option value="ETH">ETH</option>
+                                <option value="USDT">USDT</option>
+                                <option value="BNB">BNB</option>
+                                <option value="TRX">TRX</option>
+                                <option value="FIAT">Fiat</option>
+                            </select>
+                        </div>
+                        <div class="swap-output">
+                            <input type="number" id="receiveAmount" readonly>
+                            <span>3DOT</span>
+                        </div>
+                        <p id="conversionText" class="conversion-text"></p>
+                        <input type="text" id="walletAddress" placeholder="Enter your wallet address">
+                        <button id="verifyAddress">Verify Address</button>
+                        <div class="terms-acceptance">
+                            <input type="checkbox" id="termsAccept">
+                            <label for="termsAccept">I understand that Dot Protocol or any of its subsidiary businesses are not responsible for address errors or non-receipt errors after completing this transaction with the address I provided. I confirm that I have verified my address before making the final call.</label>
+                        </div>
+                        <div class="wallet-connect">
+                            <button id="connectWalletPresale" disabled>Connect Wallet</button>
+                            <button id="payWith3DOTPresale" disabled>Pay with 3DOT Wallet</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="transactions-container">
+                    <h3>Your Transactions</h3>
+                    <div id="transactionsList">
+                        <!-- Transactions will be dynamically added here -->
+                    </div>
+                    <button id="viewAllTransactions">View All</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="coming-soon-content" style="display: none;">
+            <div class="coming-soon">
+                <img src="assets/3dot-logo.png" alt="3DOT Logo" class="coming-soon-logo">
+                <h2>Coming Soon</h2>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="assets/dot-protocol-logo.png" alt="Dot Protocol Logo" class="footer-logo">
+        <p>&copy; 2024 Dot Protocol. All rights reserved.</p>
+    </footer>
+
+    <div id="testnetPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Chennai Testnet Details</h2>
+            <p>Here's how to add the Chennai Testnet to MetaMask:</p>
+            <ol>
+                <li>Open MetaMask and click on the network dropdown at the top of the extension.</li>
+                <li>Scroll down and click on "Add network".</li>
+                <li>Click "Add a network manually".</li>
+                <li>Fill in the following details:
+                    <ul>
+                        <li><strong>Network Name:</strong> Chennai Testnet</li>
+                        <li><strong>New RPC URL:</strong> http://3.82.11.145:8545</li>
+                        <li><strong>Chain ID:</strong> 1545</li>
+                        <li><strong>Currency Symbol:</strong> TDOT</li>
+                        <li><strong>Block Explorer URL:</strong> https://chennai.thedotprotocol.com</li>
+                    </ul>
+                </li>
+                <li>Click "Save".</li>
+            </ol>
+            <p>After adding the network, you can select it from the network dropdown in MetaMask to interact with the testnet.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dashboardLink = document.getElementById('dashboardLink');
+            const presaleLink = document.getElementById('presaleLink');
+            const fairsaleLink = document.getElementById('fairsaleLink');
+            const presaleTransactionsLink = document.getElementById('presaleTransactionsLink');
+            const fairsaleTransactionsLink = document.getElementById('fairsaleTransactionsLink');
+            const vaultLink = document.getElementById('vaultLink');
+            const dashboardContent = document.getElementById('dashboard-content');
+            const presaleContent = document.getElementById('presale-content');
+            const comingSoonContent = document.getElementById('coming-soon-content');
+
+            function hideAllSections() {
+                dashboardContent.style.display = 'none';
+                presaleContent.style.display = 'none';
+                comingSoonContent.style.display = 'none';
+            }
+
+            dashboardLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                hideAllSections();
+                dashboardContent.style.display = 'block';
+            });
+
+            presaleLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                hideAllSections();
+                presaleContent.style.display = 'block';
+            });
+
+            [fairsaleLink, presaleTransactionsLink, fairsaleTransactionsLink, vaultLink].forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    hideAllSections();
+                    comingSoonContent.style.display = 'block';
+                });
+            });
+
+            const connectWallet = document.getElementById('connectWallet');
+            const walletStatus = document.getElementById('walletStatus');
+            const contributionForm = document.getElementById('contributionForm');
+            const ethAmount = document.getElementById('ethAmount');
+            const contribute = document.getElementById('contribute');
+
+            let web3;
+            let selectedAccount;
+
+            async function connectWalletHandler() {
+                if (typeof window.ethereum !== 'undefined') {
+                    try {
+                        await window.ethereum.request({ method: 'eth_requestAccounts' });
+                        web3 = new Web3(window.ethereum);
+                        const accounts = await web3.eth.getAccounts();
+                        selectedAccount = accounts[0];
+                        walletStatus.textContent = `Connected: ${selectedAccount}`;
+                        connectWallet.textContent = 'Wallet Connected';
+                        contributionForm.style.display = 'block';
+                    } catch (error) {
+                        console.error(error);
+                        walletStatus.textContent = 'Failed to connect wallet';
+                    }
+                } else {
+                    walletStatus.textContent = 'Please install MetaMask';
+                }
+            }
+
+            async function contributeHandler() {
+                if (!web3 || !selectedAccount) {
+                    alert('Please connect your wallet first');
+                    return;
+                }
+
+                const amount = ethAmount.value;
+                if (amount < 0.1 || amount > 10) {
+                    alert('Please enter an amount between 0.1 and 10 ETH');
+                    return;
+                }
+
+                // Here you would typically interact with your smart contract
+                // For this example, we'll just update the UI
+                const totalRaised = document.getElementById('totalRaised');
+                const participants = document.getElementById('participants');
+                const remaining = document.getElementById('remaining');
+                const progress = document.querySelector('.progress');
+
+                const currentRaised = parseFloat(totalRaised.textContent);
+                const newRaised = currentRaised + parseFloat(amount);
+                totalRaised.textContent = `${newRaised.toFixed(2)} ETH`;
+                
+                participants.textContent = parseInt(participants.textContent) + 1;
+                
+                const remainingTokens = parseFloat(remaining.textContent.replace(',', '')) - (amount * 10000);
+                remaining.textContent = remainingTokens.toLocaleString() + ' DPC20';
+
+                const progressPercentage = (newRaised / 1000) * 100; // Assuming 1000 ETH cap
+                progress.style.width = `${progressPercentage}%`;
+
+                alert(`Thank you for your contribution of ${amount} ETH!`);
+            }
+
+            connectWallet.addEventListener('click', connectWalletHandler);
+            contribute.addEventListener('click', contributeHandler);
+
+            const swapAmount = document.getElementById('swapAmount');
+            const swapToken = document.getElementById('swapToken');
+            const receiveAmount = document.getElementById('receiveAmount');
+            const conversionText = document.getElementById('conversionText');
+            const verifyAddress = document.getElementById('verifyAddress');
+            const termsAccept = document.getElementById('termsAccept');
+            const connectWalletPresale = document.getElementById('connectWalletPresale');
+            const payWith3DOTPresale = document.getElementById('payWith3DOTPresale');
+
+            swapAmount.addEventListener('input', updateReceiveAmount);
+            swapToken.addEventListener('change', updateReceiveAmount);
+
+            function updateReceiveAmount() {
+                const amount = parseFloat(swapAmount.value) || 0;
+                const token = swapToken.value;
+
+                if (token === 'FIAT') {
+                    receiveAmount.value = '';
+                    conversionText.textContent = 'Fiat conversion coming soon';
+                    return;
+                }
+
+                let rate;
+                switch(token) {
+                    case 'ETH':
+                        rate = 2000; // Assuming 1 ETH = $2000
+                        break;
+                    case 'USDT':
+                        rate = 1;
+                        break;
+                    case 'BNB':
+                        rate = 300; // Assuming 1 BNB = $300
+                        break;
+                    case 'TRX':
+                        rate = 0.07; // Assuming 1 TRX = $0.07
+                        break;
+                    default:
+                        rate = 1;
+                }
+
+                const usdValue = amount * rate;
+                const tokens3DOT = usdValue / 0.5; // $0.50 per 3DOT token
+                receiveAmount.value = tokens3DOT.toFixed(2);
+                conversionText.textContent = `${amount} ${token} ≈ $${usdValue.toFixed(2)} ≈ ${tokens3DOT.toFixed(2)} 3DOT`;
+            }
+
+            // Trigger the calculation on page load
+            updateReceiveAmount();
+
+            verifyAddress.addEventListener('click', function() {
+                // Here you would typically verify the address
+                alert('Address verified successfully!');
+            });
+
+            termsAccept.addEventListener('change', function() {
+                connectWalletPresale.disabled = !this.checked;
+                payWith3DOTPresale.disabled = !this.checked;
+            });
+
+            // Add event listeners for the new buttons
+            connectWalletPresale.addEventListener('click', connectWalletHandler);
+            payWith3DOTPresale.addEventListener('click', function() {
+                alert('3DOT Wallet connection coming soon!');
+            });
+
+            var testnetLink = document.getElementById("testnetLink");
+            var testnetPopup = document.getElementById("testnetPopup");
+            var closePopup = testnetPopup.getElementsByClassName("close")[0];
+
+            testnetLink.onclick = function(event) {
+                event.preventDefault();
+                testnetPopup.style.display = "block";
+            }
+
+            closePopup.onclick = function() {
+                testnetPopup.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == testnetPopup) {
+                    testnetPopup.style.display = "none";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

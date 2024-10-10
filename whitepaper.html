@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Protocol - Whitepaper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/dot-protocol-logo.png" alt="Dot Protocol Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#technology">Our Technology</a></li>
+                <li><a href="index.html#ecosystem">Ecosystem</a></li>
+                <li><a href="index.html#use-cases">Use Cases</a></li>
+                <li><a href="tokenomics.html">Tokenomics</a></li>
+                <li><a href="whitepaper.html">Whitepaper</a></li>
+                <li><a href="index.html#roadmap">Roadmap</a></li>
+                <li><a href="#" id="testnetLink">Testnet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="whitepaper">
+            <h2>Whitepaper</h2>
+            <div class="whitepaper-content">
+                <h3>Dot Protocol & DPC20 Token Standard Whitepaper</h3>
+                
+                <div class="whitepaper-section">
+                    <h4>Abstract</h4>
+                    <p>The Dot Protocol introduces a next-generation blockchain ecosystem built on Proof of Authority (PoA) with QBFT consensus, designed for high scalability, energy efficiency, and industry-specific use cases such as travel, finance, and emergency services. Central to this ecosystem is the DPC20 token standard, which extends the widely-used ERC20 with innovative features like dynamic supply adjustments (rebasing), hybrid stability mechanisms, and advanced collateral management. Together, Dot Protocol and DPC20 set a new benchmark for security, scalability, and versatility in decentralized finance (DeFi) and cross-industry applications.</p>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>1. Introduction</h4>
+                    <h5>1.1 The Blockchain Landscape</h5>
+                    <p>Blockchain ecosystems such as Ethereum and Binance Smart Chain are popular but face challenges related to scalability, high transaction costs, and energy inefficiency. Dot Protocol is engineered to address these shortcomings while bringing innovations in specific industries like travel, gaming, and emergency services.</p>
+                    <h5>1.2 Vision of Dot Protocol</h5>
+                    <p>Dot Protocol envisions a scalable, energy-efficient blockchain tailored for decentralized applications (dApps) that require high throughput and low costs. Its unique features make it particularly suited for travel, finance, and cross-border remittance solutions.</p>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>2. Dot Protocol's Technology</h4>
+                    <h5>2.1 Consensus Mechanism: PoA with QBFT</h5>
+                    <p>Proof of Authority (PoA) reduces reliance on computational resources by using known validators. QBFT, a Byzantine Fault Tolerance variant, provides security and high transaction throughput, making the network resilient against malicious actors.</p>
+                    <h5>2.2 Transaction Efficiency</h5>
+                    <p>The protocol ensures faster transaction finality, lower transaction costs, and energy efficiency, making it well-suited for high-frequency transactions in sectors such as travel, remittances, and retail payments.</p>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>3. The DPC20 Token Standard</h4>
+                    <h5>3.1 Overview</h5>
+                    <p>DPC20 is a next-generation token standard that enhances the ERC20 model by integrating dynamic supply management (rebase), hybrid collateral models, and price stability features. This makes it ideal for stablecoins, DeFi applications, and cross-industry payments.</p>
+                    <h5>3.2 Key Features</h5>
+                    <ul>
+                        <li><strong>Dynamic Supply Adjustment (Rebase):</strong> Automatically adjusts token supply to maintain price stability.</li>
+                        <li><strong>Hybrid Stability Mechanism:</strong> Merges algorithmic supply adjustments with collateralized models to stabilize token prices.</li>
+                        <li><strong>Flash Loans:</strong> Allows uncollateralized loans, creating opportunities for arbitrage and liquidity enhancement.</li>
+                        <li><strong>Collateral Management:</strong> Native support for multi-asset reserves, adding robustness to collateralized tokens.</li>
+                        <li><strong>Pausable Transfers:</strong> Built-in security features enable pausing token transfers in case of emergencies.</li>
+                    </ul>
+                    <h5>3.3 Advantages Over Other Standards</h5>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>DPC20</th>
+                                <th>ERC20</th>
+                                <th>BEP20</th>
+                                <th>MATIC20</th>
+                                <th>TRC20</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Basic Transfer</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+                            <tr>
+                                <td>Rebase Mechanism</td>
+                                <td>✓</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                            </tr>
+                            <tr>
+                                <td>Flash Loans</td>
+                                <td>✓</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                            </tr>
+                            <tr>
+                                <td>Collateral Management</td>
+                                <td>✓</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                            </tr>
+                            <tr>
+                                <td>Price Oracle Integration</td>
+                                <td>✓</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                            </tr>
+                            <tr>
+                                <td>Pausable Transfers</td>
+                                <td>✓</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>4. Use Cases for Dot Protocol and DPC20</h4>
+                    <h5>4.1 Travel and Emergency Funds</h5>
+                    <p>The DPC20 token facilitates travel insurance and emergency savings accounts with real-time payouts triggered by smart contracts.</p>
+                    <h5>4.2 Cross-Border Payments</h5>
+                    <p>Optimized payment routes and low fees make the protocol ideal for international payments, remittances, and travel.</p>
+                    <h5>4.3 Flash Loan Use Cases</h5>
+                    <p>DPC20 supports arbitrage, collateral swapping, and liquidity provisioning, enhancing its utility in decentralized finance.</p>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>5. Technical Architecture</h4>
+                    <h5>5.1 Blockchain Architecture</h5>
+                    <p>Dot Protocol's PoA-based network, enhanced with QBFT consensus, provides high security and throughput. Validator nodes are incentivized to ensure network security and stability.</p>
+                    <h5>5.2 DeFi Integration and Price Oracles</h5>
+                    <p>The protocol integrates with oracles like Chainlink, enabling real-time price data essential for DPC20's rebase mechanism and collateral management.</p>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>6. Wallet and DEX Development</h4>
+                    <h5>6.1 Native Wallet</h5>
+                    <p>A mobile-friendly wallet for DPC20 tokens is under development, providing features like time-locked savings, flash loans, and biometric access for enhanced security.</p>
+                    <h5>6.2 Decentralized Exchange (DEX)</h5>
+                    <p>The native DEX will support both Automated Market Maker (AMM) and order-book models, offering high liquidity and native flash loans for seamless liquidity management.</p>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>7. Tokenomics</h4>
+                    <h5>7.1 Total Supply</h5>
+                    <p>The total supply of DPC20 tokens is capped at 1 trillion tokens. These tokens are allocated to ensure the long-term viability and profitability of the project.</p>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Allocation</th>
+                                <th>Percentage</th>
+                                <th>Total Tokens</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Founders & Team</td>
+                                <td>10%</td>
+                                <td>100 billion</td>
+                            </tr>
+                            <tr>
+                                <td>Ecosystem Development</td>
+                                <td>25%</td>
+                                <td>250 billion</td>
+                            </tr>
+                            <tr>
+                                <td>Community & Incentives</td>
+                                <td>20%</td>
+                                <td>200 billion</td>
+                            </tr>
+                            <tr>
+                                <td>Partnerships & Marketing</td>
+                                <td>15%</td>
+                                <td>150 billion</td>
+                            </tr>
+                            <tr>
+                                <td>Liquidity & Exchanges</td>
+                                <td>15%</td>
+                                <td>150 billion</td>
+                            </tr>
+                            <tr>
+                                <td>Reserve & Emergency Fund</td>
+                                <td>10%</td>
+                                <td>100 billion</td>
+                            </tr>
+                            <tr>
+                                <td>Advisors & Legal</td>
+                                <td>5%</td>
+                                <td>50 billion</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>8. Roadmap</h4>
+                    <h5>2024</h5>
+                    <ul>
+                        <li>Launch mainnet</li>
+                        <li>AI-driven governance systems</li>
+                        <li>Native mobile wallet for iOS/Android</li>
+                        <li>Launch NFT marketplace</li>
+                    </ul>
+                    <h5>2025</h5>
+                    <ul>
+                        <li>DeFi partnerships and Launch of Dexchange (Decentralized Exchange)</li>
+                        <li>Debit/credit card solutions and Merchant Payment Integrations</li>
+                    </ul>
+                    <h5>2026</h5>
+                    <ul>
+                        <li>Quantum-resistant security integration</li>
+                    </ul>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>9. Conclusion</h4>
+                    <p>The Dot Protocol and DPC20 token standard present a transformative approach to blockchain scalability, security, and application versatility. By combining algorithmic stability with multi-asset collateral models, DPC20 offers a new frontier in DeFi, cross-border payments, and industry-specific solutions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="assets/dot-protocol-logo.png" alt="Dot Protocol Logo" class="footer-logo">
+        <p>&copy; 2024 Dot Protocol. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

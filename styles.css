@@ -1,0 +1,1393 @@
+:root {
+    --black: #000000;
+    --gold: #FFD700;
+    --dark-gold: #B8860B;
+    --light-gold: #FFF8DC;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--black);
+    color: var(--light-gold);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--dark-gold);
+}
+
+main {
+    padding-top: 80px; /* Adjust based on header height */
+}
+
+section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: var(--gold);
+    text-align: center;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--black);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: var(--dark-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+}
+
+.logo img {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+}
+
+.hero-logo {
+    max-width: 200px; /* Adjust as needed */
+    margin: 2rem auto;
+    display: block;
+}
+
+.footer-logo {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .feature, .who-we-are, .our-vision, .blockchain-infra, .dpc20-token, .year {
+        flex-basis: 100%;
+    }
+}
+
+/* Social Media Section */
+#social-media {
+    background-color: rgba(255, 215, 0, 0.1);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--gold);
+    color: var(--black);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--dark-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Specific colors for each social media platform */
+.facebook:hover { background-color: #3b5998; }
+.instagram:hover { background-color: #e1306c; }
+.twitter:hover { background-color: #1da1f2; }
+.whatsapp:hover { background-color: #25d366; }
+.discord:hover { background-color: #7289da; }
+.reddit:hover { background-color: #ff4500; }
+.medium:hover { background-color: #00ab6c; }
+.telegram:hover { background-color: #0088cc; }
+
+/* ... previous styles ... */
+
+/* Roadmap Timeline */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--gold);
+}
+
+.timeline-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--gold);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item h3 {
+    margin-top: 20px;
+    color: var(--gold);
+}
+
+.timeline-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.timeline-item li {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .timeline-item::before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item h3 {
+        margin-top: 30px;
+    }
+}
+
+/* Testnet Popup */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ... rest of the styles ... */
+
+/* Use Cases Section */
+#use-cases {
+    background-color: rgba(255, 215, 0, 0.05);
+    padding: 6rem 2rem;
+}
+
+.use-cases-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.use-case-item {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.use-case-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+.use-case-item i {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.use-case-item h4 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.use-case-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .use-case-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ecosystem Section */
+#ecosystem {
+    background-color: rgba(255, 215, 0, 0.05);
+    padding: 6rem 2rem;
+}
+
+.ecosystem-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.ecosystem-item {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.ecosystem-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+.ecosystem-item i {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.ecosystem-item h4 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ecosystem-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .ecosystem-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tokenomics Section */
+#tokenomics {
+    background-color: rgba(255, 215, 0, 0.05);
+    padding: 6rem 2rem;
+}
+
+.tokenomics-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.token-distribution {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.chart-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.distribution-details {
+    flex: 1;
+    min-width: 300px;
+    padding: 0 2rem;
+}
+
+.distribution-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.distribution-details li {
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .token-distribution {
+        flex-direction: column;
+    }
+    
+    .chart-container, .distribution-details {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+}
+
+/* Technology Section */
+#technology {
+    background-color: rgba(255, 215, 0, 0.05);
+    padding: 6rem 2rem;
+}
+
+.tech-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tech-item {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+.tech-item i {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.tech-item h4 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-item p, .tech-item ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.tech-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tech-item li {
+    margin-bottom: 0.5rem;
+}
+
+.tech-comparison {
+    margin-top: 4rem;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.comparison-table th {
+    background-color: rgba(255, 215, 0, 0.2);
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-table {
+        font-size: 0.8rem;
+    }
+}
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-logo {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .hero-text h1 {
+        text-align: center;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .hero-logo {
+        max-height: 50vh;
+    }
+}
+
+/* Whitepaper Section */
+#whitepaper {
+    background-color: rgba(255, 215, 0, 0.05);
+    padding: 6rem 2rem;
+}
+
+.whitepaper-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.whitepaper-section {
+    margin-bottom: 3rem;
+}
+
+.whitepaper-section h4 {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.whitepaper-section h5 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.whitepaper-section p, .whitepaper-section ul {
+    margin-bottom: 1rem;
+}
+
+.whitepaper-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.whitepaper-section li {
+    margin-bottom: 0.5rem;
+}
+
+.whitepaper-section .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.whitepaper-section .comparison-table th,
+.whitepaper-section .comparison-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.whitepaper-section .comparison-table th {
+    background-color: rgba(255, 215, 0, 0.2);
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.whitepaper-section .comparison-table td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .whitepaper-section .comparison-table {
+        font-size: 0.8rem;
+    }
+}
+
+/* Presale Section Styles */
+#presale {
+    background-color: var(--black);
+    padding: 4rem 2rem;
+}
+
+.presale-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.presale-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+.progress-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.progress {
+    background-color: var(--gold);
+    height: 100%;
+    width: 0.00125%; /* This represents 0.00125% */
+    transition: width 0.5s ease-in-out;
+    min-width: 1px; /* Ensures the progress bar is always visible */
+}
+
+.progress-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--light-gold);
+    margin-bottom: 2rem;
+}
+
+.presale-details {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.wallet-connect {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#connectWallet {
+    background-color: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#connectWallet:hover {
+    background-color: var(--dark-gold);
+}
+
+#walletStatus {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#contributionForm {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#ethAmount {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--gold);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-gold);
+}
+
+#contribute {
+    background-color: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contribute:hover {
+    background-color: var(--dark-gold);
+}
+
+/* Presale Dashboard Styles */
+.presale-container {
+    display: flex;
+    padding-top: 80px; /* Adjust based on your header height */
+}
+
+.presale-dashboard {
+    width: 250px;
+    background-color: rgba(255, 215, 0, 0.1);
+    height: calc(100vh - 80px); /* Adjust based on your header height */
+    position: fixed;
+    overflow-y: auto;
+}
+
+.presale-dashboard ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.presale-dashboard li {
+    margin: 0;
+    padding: 0;
+}
+
+.presale-dashboard a {
+    display: block;
+    color: var(--gold);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.presale-dashboard a:hover,
+.presale-dashboard a.active {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+#dashboard-content,
+#presale-content,
+#coming-soon-content {
+    flex-grow: 1;
+    margin-left: 250px; /* Width of the dashboard */
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .presale-container {
+        flex-direction: column;
+    }
+
+    .presale-dashboard {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    #dashboard-content,
+    #presale-content,
+    #coming-soon-content {
+        margin-left: 0;
+    }
+}
+
+/* ... (previous styles) ... */
+
+/* Presale Phases Styles */
+.presale-phases {
+    margin-top: 4rem;
+}
+
+.phase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.phase-item {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.phase-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.phase-item h4 {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.phase-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.phase-item li {
+    margin-bottom: 0.5rem;
+}
+
+.phase-item strong {
+    color: var(--gold);
+}
+
+/* Update wallet connect buttons */
+.wallet-connect {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.wallet-connect button {
+    background-color: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.wallet-connect button:hover {
+    background-color: var(--dark-gold);
+}
+
+/* ... (rest of the styles) ... */
+
+/* Presale Content Styles */
+#presale-content {
+    padding: 2rem;
+}
+
+.presale-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.presale-stats-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.stat-box {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.stat-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--gold);
+}
+
+.stat-box p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+.presale-details {
+    flex: 1;
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.presale-details h4 {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.presale-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.presale-details li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .presale-content-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* Add this to your existing styles */
+
+.coming-soon {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.coming-soon-logo {
+    max-width: 200px;
+    margin-bottom: 2rem;
+}
+
+.coming-soon h2 {
+    font-size: 2.5rem;
+    color: var(--gold);
+}
+
+#dashboardLink {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#dashboardLink:hover {
+    color: var(--gold);
+}
+
+.presale-actions-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.swap-container, .transactions-container {
+    flex: 1;
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.swap-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.swap-input, .swap-output {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.swap-input input, .swap-input select, .swap-output input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--gold);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-gold);
+}
+
+#walletAddress {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--gold);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-gold);
+}
+
+#verifyAddress, #viewAllTransactions {
+    background-color: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#verifyAddress:hover, #viewAllTransactions:hover {
+    background-color: var(--dark-gold);
+}
+
+.terms-acceptance {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.terms-acceptance label {
+    font-size: 0.9rem;
+}
+
+.wallet-connect {
+    display: flex;
+    gap: 1rem;
+}
+
+.wallet-connect button {
+    flex: 1;
+    padding: 0.8rem 1.5rem;
+}
+
+.wallet-connect button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#transactionsList {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .presale-actions-wrapper {
+        flex-direction: column;
+    }
+}
+
+.conversion-text {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--gold);
+    text-align: center;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: var(--black);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--gold);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close {
+    color: var(--gold);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--dark-gold);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Make sure the logo is clickable on all pages */
+.logo a {
+    display: inline-block;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-image {
+        width: 100%;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        margin: 0.5rem 0;
+    }
+
+    .presale-content-wrapper,
+    .presale-actions-wrapper {
+        flex-direction: column;
+    }
+
+    .swap-container,
+    .transactions-container {
+        width: 100%;
+    }
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: var(--black);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--gold);
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.popup-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.popup-image {
+    flex: 1;
+    text-align: center;
+}
+
+.popup-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.close {
+    color: var(--gold);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--dark-gold);
+    text-decoration: none;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .popup-flex {
+        flex-direction: column;
+    }
+
+    .popup-text, .popup-image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .popup-image {
+        margin-top: 1rem;
+    }
+}
+
+/* Add this to your existing styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem;
+    }
+
+    .whitepaper-section .comparison-table {
+        font-size: 0.7rem;
+    }
+
+    .whitepaper-section .comparison-table th,
+    .whitepaper-section .comparison-table td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .whitepaper-section .comparison-table {
+        font-size: 0.6rem;
+    }
+
+    .whitepaper-section .comparison-table th,
+    .whitepaper-section .comparison-table td {
+        padding: 0.3rem;
+    }
+}
